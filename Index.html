@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine 💖</title>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        overflow: hidden;
+    }
+    .box {
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        max-width: 350px;
+    }
+    h1 {
+        color: #e91e63;
+    }
+    button {
+        padding: 12px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        margin: 12px;
+    }
+    #yes {
+        background-color: #e91e63;
+        color: white;
+    }
+    #no {
+        background-color: #ddd;
+        position: absolute;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box" id="content">
+    <h1>💘 Be My Valentine? 💘</h1>
+    <p>En life-la irukka best decision… ippo edunga 😌</p>
+
+    <button id="yes" onclick="yesClicked()">YES 💕</button>
+    <button id="no" onmouseover="moveNo()">NO 😜</button>
+</div>
+
+<script>
+function moveNo() {
+    const noBtn = document.getElementById("no");
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 120);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+    noBtn.innerText = "Escape illa 😈\nYou’re under my control";
+}
+
+function yesClicked() {
+    document.getElementById("content").innerHTML = `
+        <h1>🥰 Awwww!</h1>
+        <p style="font-size:18px;">
+        Seri… official ah solren 💍<br><br>
+
+        Nee irundha pothum…  
+        world venam 🌍❌<br><br>
+
+        En heart, en soul,  
+        ellame unakku thaan ❤️✨<br><br>
+
+        <b>Forever yours,</b><br>
+        <b>— Subi 💖</b>  <!-- ✏️ CHANGE NAME HERE -->
+        </p>
+    `;
+}
+</script>
+
+</body>
+</html>
